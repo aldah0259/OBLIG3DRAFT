@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestilling av kinobilletter</title>
+    <style>
+        label { display: table-cell; }
+        input { display: table-cell; }
+    </style>
+</head>
+
+<body>
+<h1 class="h1 text-center">Bestilling av kinobilletter</h1>
+<form>
+    <label for="filmer">Velg film:</label>
+    <select id="filmer" class="form-select" aria-label="Velg film">
+
+        <option value="blank"></option>
+        <option value="LOTR">The Fellowship of the Ring</option>
+        <option value="LOTR">The Two Towers</option>
+        <option value="LOTR">The Return of the King</option>
+
+    </select>
+    <br>
+    <label for="Antall">Antall:</label>
+    <input id="Antall" class="form-control" type="number">
+    <p id="AntallError"></p><br>
+
+    <label for="Fornavn">Fornavn:</label>
+    <input id="Fornavn" class="form-control" type="text">
+    <p id="FornavnError"></p><br>
+
+    <label for="Etternavn">Etternavn:</label>
+    <input id="Etternavn" class="form-control" type="text">
+    <p id="EtternavnError"></p><br>
+
+    <label for="TelefonNr">Telefon:</label>
+    <input id="TelefonNr" class="form-control" type="number">
+    <p id="TelefonNrError"></p><br>
+
+    <label for="Epost">Epost:</label>
+    <input id="Epost" class="form-control" type="email">
+    <p id="EptudstostError"></p><br>
+
+    <input type="button" class="form-control" value="Kjøp billett" onclick="kjøpbillett()">
+</form>
+
+<h1 class="h1 text-center">Alle billetter</h1>
+<div id="ut"></div>
+<button onclick="AltDelete()" type="button" class="btn btn-primary">Slett alle billetter</button>
+<script src="kinobilletter.js"></script>
+
+</body>
+
+</html>
